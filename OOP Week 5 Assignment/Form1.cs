@@ -119,5 +119,11 @@ namespace OOP_Week_5_Assignment
                 }
             }
         }
+
+        //Accidentally added this too.
+        private void menuItem6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
