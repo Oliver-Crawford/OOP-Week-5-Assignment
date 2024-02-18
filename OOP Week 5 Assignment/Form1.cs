@@ -14,16 +14,19 @@ namespace OOP_Week_5_Assignment
         public Form1()
         {
             InitializeComponent();
+            //sets the title to New File
             this.Text = "New File";
         }
 
         private void menuItem7_Click(object sender, EventArgs e)
         {
+            //closes the environment
             Environment.Exit(0);
         }
 
         private void menuItemNew_Click(object sender, EventArgs e)
         {
+            //Clears returns the form to it's original state
             rTxtBMain.Text = "";
             filePath = "";
             this.Text = "New File";
@@ -31,8 +34,11 @@ namespace OOP_Week_5_Assignment
 
         private void menuItemNewWindow_Click(object sender, EventArgs e)
         {
+            //Creates a new form window and opens it
+            //I'm a bit surprised that I can open up multiple windows using this.
             Form1 form = new Form1();
             form.filePath = "";
+            form.Text = "New File";
             form.Show();
         }
 
@@ -67,6 +73,7 @@ namespace OOP_Week_5_Assignment
             
         }
 
+        //Accidentally added this, can't figure out how to remove it without breaking stuff
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
@@ -74,6 +81,7 @@ namespace OOP_Week_5_Assignment
 
         private void menuItemSave_Click(object sender, EventArgs e)
         {
+            //if the file path hasn't been set yet, use the menuItemSaveAs_Click method.
             if (filePath == "")
             {
                 menuItemSaveAs_Click(null, null);
